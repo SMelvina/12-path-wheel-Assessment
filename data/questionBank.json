@@ -1,0 +1,565 @@
+{
+  "version": "2.0-revised",
+  "title": "Multidimensional Wheel of Life Assessment",
+  "totalPaths": 12,
+  "questionsPerPath": 5,
+  "totalQuestions": 60,
+  "responseScale": {
+    "min": 1,
+    "max": 10,
+    "anchors": [
+      { "range": "1–2", "min": 1, "max": 2, "label": "Not at all true of me / rarely true" },
+      { "range": "3–4", "min": 3, "max": 4, "label": "Seldom true of me" },
+      { "range": "5–6", "min": 5, "max": 6, "label": "Sometimes or partly true of me" },
+      { "range": "7–8", "min": 7, "max": 8, "label": "Often true of me" },
+      { "range": "9–10", "min": 9, "max": 10, "label": "Consistently true of me" }
+    ]
+  },
+  "interpretationBands": [
+    {
+      "key": "needs_attention",
+      "label": "Needs Attention",
+      "min": 1.0,
+      "max": 3.999999,
+      "description": "Responses indicate an area that may benefit from deliberate attention and development.",
+      "color": "#DC2626"
+    },
+    {
+      "key": "developing",
+      "label": "Developing",
+      "min": 4.0,
+      "max": 6.999999,
+      "description": "Responses suggest existing foundations alongside opportunities for improvement.",
+      "color": "#D97706"
+    },
+    {
+      "key": "strong_foundation",
+      "label": "Strong Foundation",
+      "min": 7.0,
+      "max": 10.0,
+      "description": "Responses suggest relatively strong foundations in this area.",
+      "color": "#059669"
+    }
+  ],
+  "paths": [
+    {
+      "id": "spirituality",
+      "order": 1,
+      "name": "Spirituality",
+      "color": "#C4B5FD",
+      "description": "Explores faith, daily devotion, spiritual alignment, and fellowship.",
+      "reflectionPrompts": [
+        "How can you create regular space for prayer, reflection, or fellowship this week?",
+        "What helps you feel most grounded and aligned with your core spiritual convictions?"
+      ],
+      "questions": [
+        {
+          "id": "spirituality_1",
+          "index": 1,
+          "dimension": "Faith in daily practice",
+          "statement": "I infuse my faith into my day-to-day practices."
+        },
+        {
+          "id": "spirituality_2",
+          "index": 2,
+          "dimension": "Daily devotion and prayer",
+          "statement": "I encounter God daily through devotion and prayer."
+        },
+        {
+          "id": "spirituality_3",
+          "index": 3,
+          "dimension": "Spirit-led decisions",
+          "statement": "I am Spirit-led in my decisions."
+        },
+        {
+          "id": "spirituality_4",
+          "index": 4,
+          "dimension": "Fellowship",
+          "statement": "I regularly fellowship with other believers."
+        },
+        {
+          "id": "spirituality_5",
+          "index": 5,
+          "dimension": "Love in daily life",
+          "statement": "I walk in love in my daily life."
+        }
+      ]
+    },
+    {
+      "id": "intellectual_personal_development",
+      "order": 2,
+      "name": "Intellectual & Personal Development",
+      "color": "#93C5FD",
+      "description": "Evaluates learning orientation, skill building, critical thinking, and growth application.",
+      "reflectionPrompts": [
+        "What is one key skill or topic you are currently motivated to deepen?",
+        "How regularly do you translate what you read and learn into daily habits?"
+      ],
+      "questions": [
+        {
+          "id": "intellectual_1",
+          "index": 1,
+          "dimension": "Learning orientation",
+          "statement": "I make consistent time to learn things that support my growth."
+        },
+        {
+          "id": "intellectual_2",
+          "index": 2,
+          "dimension": "Skill development",
+          "statement": "I actively develop skills that matter for my personal and professional goals."
+        },
+        {
+          "id": "intellectual_3",
+          "index": 3,
+          "dimension": "Critical thinking",
+          "statement": "I examine information and assumptions before deciding what to believe."
+        },
+        {
+          "id": "intellectual_4",
+          "index": 4,
+          "dimension": "Growth evidence",
+          "statement": "I can identify meaningful progress in my knowledge, capabilities, or personal habits over time."
+        },
+        {
+          "id": "intellectual_5",
+          "index": 5,
+          "dimension": "Applying learning",
+          "statement": "I take action based on what I have learned."
+        }
+      ]
+    },
+    {
+      "id": "marriage",
+      "order": 3,
+      "name": "Marriage",
+      "color": "#F9A8D4",
+      "isConditional": true,
+      "conditionalPrompt": "This path evaluates marital relationship health. If you are not currently married, you may mark this path as Not Applicable.",
+      "description": "Examines mutual respect, intimacy, communication, conflict repair, and intentional relationship investment.",
+      "reflectionPrompts": [
+        "What is one intentional conversation or shared moment you can prioritize this week?",
+        "Where can you and your spouse practice gentleness and proactive repair during disagreements?"
+      ],
+      "questions": [
+        {
+          "id": "marriage_1",
+          "index": 1,
+          "dimension": "Intentional investment",
+          "statement": "My spouse and I make consistent time and effort to strengthen our relationship."
+        },
+        {
+          "id": "marriage_2",
+          "index": 2,
+          "dimension": "Affection and intimacy",
+          "statement": "My spouse and I nurture affection and intimacy in ways that feel respectful and mutually comfortable."
+        },
+        {
+          "id": "marriage_3",
+          "index": 3,
+          "dimension": "Mutual respect",
+          "statement": "My spouse and I treat each other with dignity, including during stressful moments."
+        },
+        {
+          "id": "marriage_4",
+          "index": 4,
+          "dimension": "Communication, values and future",
+          "statement": "My spouse and I can discuss important issues openly and respectfully, including our values and future."
+        },
+        {
+          "id": "marriage_5",
+          "index": 5,
+          "dimension": "Conflict repair",
+          "statement": "When disagreements occur, my spouse and I work toward understanding and repair."
+        }
+      ]
+    },
+    {
+      "id": "career_business_ministry",
+      "order": 4,
+      "name": "Career, Business & Ministry",
+      "color": "#A78BFA",
+      "description": "Explores alignment, professional progress, execution, and meaningful impact.",
+      "reflectionPrompts": [
+        "Does your daily work align with the deeper value and legacy you want to create?",
+        "What is the single highest-priority project you need to execute consistently right now?"
+      ],
+      "questions": [
+        {
+          "id": "career_1",
+          "index": 1,
+          "dimension": "Learning and growth",
+          "statement": "I am developing the knowledge and skills needed for my next stage."
+        },
+        {
+          "id": "career_2",
+          "index": 2,
+          "dimension": "Direction and alignment",
+          "statement": "My work is meaningfully aligned with my values and current priorities."
+        },
+        {
+          "id": "career_3",
+          "index": 3,
+          "dimension": "Progress toward goals",
+          "statement": "I am making progress toward clear career, business, or ministry goals."
+        },
+        {
+          "id": "career_4",
+          "index": 4,
+          "dimension": "Execution",
+          "statement": "I consistently turn important work priorities into completed actions."
+        },
+        {
+          "id": "career_5",
+          "index": 5,
+          "dimension": "Impact and value",
+          "statement": "My work creates meaningful value for the people or communities I serve."
+        }
+      ]
+    },
+    {
+      "id": "personal_finance",
+      "order": 5,
+      "name": "Personal Finance",
+      "color": "#86EFAC",
+      "description": "Measures financial awareness, budgeting, income generation, obligations, and long-term security.",
+      "reflectionPrompts": [
+        "Do you have total visibility into your monthly cash flow, savings, and debt obligations?",
+        "What proactive step can you take this quarter to strengthen your long-term financial security?"
+      ],
+      "questions": [
+        {
+          "id": "finance_1",
+          "index": 1,
+          "dimension": "Financial awareness",
+          "statement": "I understand my current income, expenses, debts, and financial commitments."
+        },
+        {
+          "id": "finance_2",
+          "index": 2,
+          "dimension": "Budgeting and planning",
+          "statement": "I have a practical plan for allocating my money."
+        },
+        {
+          "id": "finance_3",
+          "index": 3,
+          "dimension": "Wealth and income generation",
+          "statement": "I can create or attract income and financial opportunities through my skills, relationships, and other resources."
+        },
+        {
+          "id": "finance_4",
+          "index": 4,
+          "dimension": "Financial safety net and obligations",
+          "statement": "I make provision for savings and unexpected expenses, and I manage any debt obligations responsibly."
+        },
+        {
+          "id": "finance_5",
+          "index": 5,
+          "dimension": "Long-term planning",
+          "statement": "I take practical steps toward my long-term financial goals."
+        }
+      ]
+    },
+    {
+      "id": "friends",
+      "order": 6,
+      "name": "Friends",
+      "color": "#FDBA74",
+      "description": "Looks at trust, reciprocity, healthy boundaries, and intentionality in personal friendships.",
+      "reflectionPrompts": [
+        "Which friendship nourishes your soul and deserves intentional connection this month?",
+        "Are your friendships reciprocal, giving you safe room to be honest and vulnerable?"
+      ],
+      "questions": [
+        {
+          "id": "friends_1",
+          "index": 1,
+          "dimension": "Trust and safety",
+          "statement": "I have friends with whom I can be honest and feel respected."
+        },
+        {
+          "id": "friends_2",
+          "index": 2,
+          "dimension": "Mutual support",
+          "statement": "Support and care in my friendships flow in both directions."
+        },
+        {
+          "id": "friends_3",
+          "index": 3,
+          "dimension": "Healthy boundaries",
+          "statement": "I can maintain boundaries without feeling compelled to please everyone."
+        },
+        {
+          "id": "friends_4",
+          "index": 4,
+          "dimension": "Intentional friendship",
+          "statement": "I take initiative to nurture friendships rather than relying only on chance contact."
+        },
+        {
+          "id": "friends_5",
+          "index": 5,
+          "dimension": "Diversity of connection",
+          "statement": "My friendships offer a healthy mix of shared interests, perspectives, and experiences."
+        }
+      ]
+    },
+    {
+      "id": "networks_support_alliances",
+      "order": 7,
+      "name": "Networks, Support & Alliances",
+      "color": "#6EE7B7",
+      "description": "Assesses access to reliable support, strategic alliances, and community participation.",
+      "reflectionPrompts": [
+        "Who is in your professional or emotional support network when unexpected challenges occur?",
+        "How actively do you maintain relationships with mentors, advisors, and collaborative communities?"
+      ],
+      "questions": [
+        {
+          "id": "networks_1",
+          "index": 1,
+          "dimension": "Resource navigation",
+          "statement": "I know how to find reliable people, information, or resources when needs arise."
+        },
+        {
+          "id": "networks_2",
+          "index": 2,
+          "dimension": "Strategic relationships",
+          "statement": "I intentionally build relationships connected to my goals and responsibilities."
+        },
+        {
+          "id": "networks_3",
+          "index": 3,
+          "dimension": "Access to support",
+          "statement": "I know whom I can approach for practical, emotional, or professional support."
+        },
+        {
+          "id": "networks_4",
+          "index": 4,
+          "dimension": "Relationship maintenance",
+          "statement": "I maintain important relationships through thoughtful and consistent contact."
+        },
+        {
+          "id": "networks_5",
+          "index": 5,
+          "dimension": "Community participation",
+          "statement": "I participate in communities or groups that provide meaningful connection or learning."
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "order": 8,
+      "name": "Health",
+      "color": "#7DD3FC",
+      "description": "Reviews physical activity, nutrition, hydration, sleep quality, and daily vitality.",
+      "reflectionPrompts": [
+        "What is one sustainable improvement to your sleep or nutrition that would elevate your daily energy?",
+        "How are you listening and responding to physical signals your body gives you?"
+      ],
+      "questions": [
+        {
+          "id": "health_1",
+          "index": 1,
+          "dimension": "Physical activity",
+          "statement": "I engage in physical activity appropriate for my needs and circumstances."
+        },
+        {
+          "id": "health_2",
+          "index": 2,
+          "dimension": "Nutrition and hydration",
+          "statement": "My everyday eating and hydration habits generally support my wellbeing."
+        },
+        {
+          "id": "health_3",
+          "index": 3,
+          "dimension": "Maintaining health",
+          "statement": "I take consistent steps to maintain my health over time."
+        },
+        {
+          "id": "health_4",
+          "index": 4,
+          "dimension": "Energy and functioning",
+          "statement": "I have the energy and physical functioning needed for my usual responsibilities."
+        },
+        {
+          "id": "health_5",
+          "index": 5,
+          "dimension": "Sleep",
+          "statement": "I usually get enough restorative sleep to function well."
+        }
+      ]
+    },
+    {
+      "id": "rest_renewal_recreation",
+      "order": 9,
+      "name": "Rest, Renewal, Rejuvenation & Recreation",
+      "color": "#D9F99D",
+      "description": "Evaluates recovery time, hobbies, work-life boundaries, regularity, and mental disengagement.",
+      "reflectionPrompts": [
+        "Do you allow yourself to truly rest and disconnect without experiencing productivity guilt?",
+        "What recreational activity recharges you that you can schedule onto your calendar this weekend?"
+      ],
+      "questions": [
+        {
+          "id": "rest_1",
+          "index": 1,
+          "dimension": "Recovery time",
+          "statement": "I schedule enough time to recover after demanding periods."
+        },
+        {
+          "id": "rest_2",
+          "index": 2,
+          "dimension": "Recreation",
+          "statement": "I regularly make time for activities I enjoy for their own sake."
+        },
+        {
+          "id": "rest_3",
+          "index": 3,
+          "dimension": "Boundaries around work",
+          "statement": "I protect some boundaries between work and personal time."
+        },
+        {
+          "id": "rest_4",
+          "index": 4,
+          "dimension": "Regularity",
+          "statement": "Rest and renewal are regular parts of my life rather than occasional afterthoughts."
+        },
+        {
+          "id": "rest_5",
+          "index": 5,
+          "dimension": "Mental disengagement",
+          "statement": "I can step away from work or responsibilities and mentally switch off."
+        }
+      ]
+    },
+    {
+      "id": "influence_legacy",
+      "order": 10,
+      "name": "Influence & Legacy",
+      "color": "#FCA5A5",
+      "description": "Examines mentorship, values in action, community contribution, and long-term impact.",
+      "reflectionPrompts": [
+        "In what ways are you actively sharing knowledge or opportunities to lift others up?",
+        "What kind of lasting mark do you want your life and contributions to leave?"
+      ],
+      "questions": [
+        {
+          "id": "influence_1",
+          "index": 1,
+          "dimension": "Developing others",
+          "statement": "I invest in helping other people learn, grow, or succeed."
+        },
+        {
+          "id": "influence_2",
+          "index": 2,
+          "dimension": "Values in action",
+          "statement": "The influence I have is generally consistent with the values I want to represent."
+        },
+        {
+          "id": "influence_3",
+          "index": 3,
+          "dimension": "Community impact",
+          "statement": "I contribute to causes, communities, or efforts beyond my immediate interests."
+        },
+        {
+          "id": "influence_4",
+          "index": 4,
+          "dimension": "Knowledge sharing",
+          "statement": "I share useful knowledge, skills, or opportunities with others."
+        },
+        {
+          "id": "influence_5",
+          "index": 5,
+          "dimension": "Evidence of contribution",
+          "statement": "I can point to specific actions or outcomes that reflect the kind of impact I want to have."
+        }
+      ]
+    },
+    {
+      "id": "purpose_vision_calling",
+      "order": 11,
+      "name": "Purpose, Vision & Calling",
+      "color": "#D8B4FE",
+      "description": "Explores vision clarity, discernment of calling, practical action, and daily sense of meaning.",
+      "reflectionPrompts": [
+        "How clearly can you articulate your core vision for the season ahead?",
+        "Where can you take courageous, practical steps toward your calling despite uncertainties?"
+      ],
+      "questions": [
+        {
+          "id": "purpose_1",
+          "index": 1,
+          "dimension": "Vision",
+          "statement": "I have a clear picture of the future I want to work toward."
+        },
+        {
+          "id": "purpose_2",
+          "index": 2,
+          "dimension": "Understanding of calling",
+          "statement": "I am actively discerning how my abilities, convictions, and circumstances can serve a meaningful purpose."
+        },
+        {
+          "id": "purpose_3",
+          "index": 3,
+          "dimension": "Action toward vision",
+          "statement": "I take practical steps toward the future I want to build."
+        },
+        {
+          "id": "purpose_4",
+          "index": 4,
+          "dimension": "Courage and commitment",
+          "statement": "I am willing to take reasonable steps toward my purpose despite uncertainty."
+        },
+        {
+          "id": "purpose_5",
+          "index": 5,
+          "dimension": "Sense of meaning",
+          "statement": "My everyday activities include a meaningful connection to what I believe matters."
+        }
+      ]
+    },
+    {
+      "id": "identity_character",
+      "order": 12,
+      "name": "Identity & Character",
+      "color": "#CBD5E1",
+      "description": "Assesses self-understanding, accountability, courage, boundaries, and character growth.",
+      "reflectionPrompts": [
+        "Where is your character being tested or strengthened in this current chapter of your life?",
+        "Are your personal boundaries firm enough to protect your peace, integrity, and convictions?"
+      ],
+      "questions": [
+        {
+          "id": "identity_1",
+          "index": 1,
+          "dimension": "Self-understanding",
+          "statement": "I have a reasonably clear understanding of who I am and what matters to me."
+        },
+        {
+          "id": "identity_2",
+          "index": 2,
+          "dimension": "Accountability",
+          "statement": "I take responsibility for my choices and their consequences."
+        },
+        {
+          "id": "identity_3",
+          "index": 3,
+          "dimension": "Courage",
+          "statement": "I am willing to do what I believe is right even when it is uncomfortable."
+        },
+        {
+          "id": "identity_4",
+          "index": 4,
+          "dimension": "Boundaries",
+          "statement": "I can communicate and maintain boundaries that protect my values and wellbeing."
+        },
+        {
+          "id": "identity_5",
+          "index": 5,
+          "dimension": "Character growth",
+          "statement": "I can identify ways I am actively strengthening my character over time."
+        }
+      ]
+    }
+  ]
+}
+

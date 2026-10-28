@@ -1,0 +1,17 @@
+{
+  "name": "12-path-wheel-assessment",
+  "version": "1.0.0",
+  "description": "Multidimensional Wheel of Life Assessment",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "keywords": [
+    "wheel-of-life",
+    "assessment",
+    "self-development"
+  ],
+  "author": "",
+  "license": "ISC"
+}

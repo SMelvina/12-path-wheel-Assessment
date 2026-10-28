@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/preview", "destination": "/index.html" },
+    { "source": "/preview/:match*", "destination": "/index.html" },
+    { "source": "/typeform", "destination": "/typeform.html" },
+    { "source": "/survey", "destination": "/typeform.html" },
+    { "source": "/api/:match*", "destination": "/api" }
+  ]
+}

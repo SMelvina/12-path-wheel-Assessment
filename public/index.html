@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Wheel of Life — Multidimensional Self-Reflection</title>
+  <meta name="description" content="A quiet, refined self-reflection across twelve dimensions of life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2.8">
+</head>
+<body>
+  <!-- Design Prototype Mode Banner (Visible only in preview mode) -->
+  <aside id="preview-mode-banner" class="preview-mode-bar" style="display: none;" aria-label="Design Prototype Controls">
+    <div class="preview-left">
+      <span class="preview-pill">Prototype Mode</span>
+      <span class="preview-text">Freely advance without selecting answers to preview the design.</span>
+    </div>
+    <div class="preview-nav-jumps">
+      <span class="preview-jump-label">Jump to:</span>
+      <button type="button" class="preview-jump-btn" id="jump-welcome">Welcome</button>
+      <button type="button" class="preview-jump-btn" id="jump-instructions">Instructions</button>
+      <button type="button" class="preview-jump-btn" id="jump-question">Question Flow</button>
+      <button type="button" class="preview-jump-btn" id="jump-results">Results Dashboard</button>
+    </div>
+  </aside>
+
+  <!-- Quiet, Minimal Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-title">THE WHEEL OF LIFE</span>
+      </div>
+      <div class="header-status" id="header-status" aria-live="polite">
+        <!-- Dynamic stage info -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Experience Container -->
+  <main class="app-main" id="app-root">
+    
+    <!-- View 1: Clean Editorial Welcome Screen -->
+    <section id="view-welcome" class="view-panel active">
+      <div class="editorial-container welcome-view">
+        <p class="eyebrow-label">Multidimensional Reflection</p>
+        <h1 class="editorial-hero-title">A quiet reflection on your whole life.</h1>
+        <p class="editorial-lead">
+          Traditional exercises ask for arbitrary ratings. This experience guides you through twelve essential dimensions of living using concrete, indicator-grounded statements—creating a clear, balanced visual portrait of where you stand today.
+        </p>
+
+        <div class="editorial-meta-line">
+          <span>12 Dimensions</span>
+          <span class="meta-dot">·</span>
+          <span>5 Questions Each</span>
+          <span class="meta-dot">·</span>
+          <span>~10 Minutes</span>
+          <span class="meta-dot">·</span>
+          <span>Private &amp; Confidential</span>
+        </div>
+
+        <div class="actions-group">
+          <button type="button" class="btn btn-primary" id="btn-start-welcome">
+            Continue →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 2: Pure Minimal Instructions Screen -->
+    <section id="view-instructions" class="view-panel">
+      <div class="editorial-container">
+        <p class="eyebrow-label">Guidance</p>
+        <h2 class="editorial-title">Rating your everyday reality.</h2>
+        <p class="editorial-body">
+          For each statement, reflect on how consistently it describes your actual experience over recent months, rather than an ideal aspiration.
+        </p>
+
+        <!-- Elegant Pastel Spectrum Scale Bar -->
+        <div class="scale-spectrum-wrapper">
+          <div class="spectrum-bar">
+            <span class="spectrum-segment seg-1"></span>
+            <span class="spectrum-segment seg-2"></span>
+            <span class="spectrum-segment seg-3"></span>
+            <span class="spectrum-segment seg-4"></span>
+            <span class="spectrum-segment seg-5"></span>
+          </div>
+          <div class="spectrum-labels">
+            <div class="spectrum-col">
+              <strong class="spec-num">1 – 2</strong>
+              <span class="spec-text">Rarely or not true</span>
+            </div>
+            <div class="spectrum-col">
+              <strong class="spec-num">3 – 4</strong>
+              <span class="spec-text">Seldom true</span>
+            </div>
+            <div class="spectrum-col">
+              <strong class="spec-num">5 – 6</strong>
+              <span class="spec-text">Sometimes true</span>
+            </div>
+            <div class="spectrum-col">
+              <strong class="spec-num">7 – 8</strong>
+              <span class="spec-text">Often true</span>
+            </div>
+            <div class="spectrum-col">
+              <strong class="spec-num">9 – 10</strong>
+              <span class="spec-text">Consistently true</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="editorial-note">
+          Answer honestly based on where you are right now. Scores are thoughtful indicators for personal growth, never definitive judgements of your worth.
+        </p>
+
+        <div class="actions-group dual-actions">
+          <button type="button" class="btn btn-text" id="btn-back-instructions">
+            ← Back
+          </button>
+          <button type="button" class="btn btn-primary" id="btn-proceed-first-question">
+            Continue →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 3: Single Question Flow (Artistic & Distraction-Free) -->
+    <section id="view-question" class="view-panel">
+      <div class="editorial-container question-view">
+        <!-- Delicate Header & Progress Line -->
+        <div class="question-top-bar">
+          <span class="path-sequence-label" id="current-path-badge">01 / 12</span>
+          <span class="path-current-name" id="current-path-name">Spirituality</span>
+          <span class="question-step-label" id="current-question-counter">Question 1 of 5</span>
+        </div>
+
+        <div class="hairline-progress-track" role="progressbar" aria-valuemin="1" aria-valuemax="60" aria-valuenow="1" id="overall-progress-bar">
+          <div class="hairline-progress-fill" id="progress-fill" style="width: 1.66%;"></div>
+        </div>
+
+        <!-- Question Content Card (Smooth Typeform Directional Slide Animation) -->
+        <div class="question-card-inner" id="question-card-inner">
+          <!-- Question Body -->
+          <div class="question-body-space">
+            <p class="dimension-eyebrow" id="current-dimension-tag">
+              Faith in daily practice
+            </p>
+
+            <blockquote class="statement-editorial-quote" id="current-statement-text">
+              “I infuse my faith into my day-to-day practices.”
+            </blockquote>
+          </div>
+
+          <!-- Conditional Path (Marriage) skip banner -->
+          <div id="conditional-path-banner" class="subtle-inline-banner" style="display: none;">
+            <span id="conditional-banner-text">This path evaluates marital health.</span>
+            <button type="button" class="btn-inline-link" id="btn-skip-conditional">
+              Skip this path (Not Applicable to my circumstances)
+            </button>
+          </div>
+
+          <!-- Elegant 1–10 Rating Selector -->
+          <div class="selector-section">
+            <div class="scale-label-row">
+              <span class="scale-label-quiet">1 = Rarely true</span>
+              <span class="scale-label-quiet">10 = Consistently true</span>
+            </div>
+
+            <div class="scale-pill-row" role="radiogroup" aria-label="1 to 10 response scale">
+              <button type="button" class="rating-pill" data-value="1" aria-label="Rating 1">1</button>
+              <button type="button" class="rating-pill" data-value="2" aria-label="Rating 2">2</button>
+              <button type="button" class="rating-pill" data-value="3" aria-label="Rating 3">3</button>
+              <button type="button" class="rating-pill" data-value="4" aria-label="Rating 4">4</button>
+              <button type="button" class="rating-pill" data-value="5" aria-label="Rating 5">5</button>
+              <button type="button" class="rating-pill" data-value="6" aria-label="Rating 6">6</button>
+              <button type="button" class="rating-pill" data-value="7" aria-label="Rating 7">7</button>
+              <button type="button" class="rating-pill" data-value="8" aria-label="Rating 8">8</button>
+              <button type="button" class="rating-pill" data-value="9" aria-label="Rating 9">9</button>
+              <button type="button" class="rating-pill" data-value="10" aria-label="Rating 10">10</button>
+            </div>
+
+            <!-- Dynamic Live Selection Meaning -->
+            <div class="active-selection-feedback" id="active-anchor-box" aria-live="polite">
+              <span class="feedback-placeholder">Select a rating that reflects your recent experience.</span>
+            </div>
+          </div>
+
+          <!-- Validation Error Message -->
+          <div class="validation-message-quiet" id="question-validation-error" style="display: none;">
+            Please select a rating before continuing.
+          </div>
+
+          <!-- Right-Aligned Action Buttons -->
+          <div class="actions-group dual-actions question-nav-actions">
+            <button type="button" class="btn btn-text" id="btn-prev-question">
+              ← Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-next-question">
+              Next →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 4: Calm Neutral Path Transition (Centralized Buttons) -->
+    <section id="view-transition" class="view-panel">
+      <div class="editorial-container text-center transition-container">
+        <p class="eyebrow-label">Milestone</p>
+        <h2 class="editorial-title" id="transition-completed-title">Section Completed</h2>
+        <p class="editorial-body" id="transition-message">
+          You have completed this dimension. Take a breath as we transition into the next area.
+        </p>
+        <div class="actions-group milestone-actions">
+          <button type="button" class="btn btn-primary btn-centered" id="btn-continue-transition">
+            Continue →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 5: Graceful Processing Screen -->
+    <section id="view-submitting" class="view-panel">
+      <div class="editorial-container text-center loading-view">
+        <div class="delicate-spinner"></div>
+        <h2 class="editorial-title">Composing Your Life Wheel</h2>
+        <p class="editorial-body">
+          Synthesizing your twelve dimensions into a personalized reflection profile...
+        </p>
+      </div>
+    </section>
+
+    <!-- View 6: High-End Results Dashboard -->
+    <section id="view-results" class="view-panel">
+      <div class="editorial-results-wrapper">
+        <!-- Results Header -->
+        <div class="results-header-block">
+          <div class="completion-pill">Assessment Complete</div>
+          <h1 class="editorial-hero-title">Your Wheel of Life</h1>
+          <p class="editorial-lead">
+            A visual reflection of your current foundations and growth invitations across twelve dimensions.
+          </p>
+          <div class="results-date-subtext" id="results-date-display"></div>
+        </div>
+
+        <!-- Results Quick Stat Strip (Adds life and clarity) -->
+        <div class="results-stats-strip">
+          <div class="stat-card">
+            <span class="stat-label">Assessed Dimensions</span>
+            <span class="stat-value" id="stat-evaluated-count">12 / 12</span>
+          </div>
+          <div class="stat-card stat-card-strong">
+            <span class="stat-label">Strong Foundation</span>
+            <span class="stat-value" id="stat-top-domain">—</span>
+          </div>
+          <div class="stat-card stat-card-focus">
+            <span class="stat-label">Growth Focus</span>
+            <span class="stat-value" id="stat-focus-domain">—</span>
+          </div>
+        </div>
+
+        <!-- Polar Area Wheel Chart Space -->
+        <div class="chart-presentation-space">
+          <div class="svg-wheel-wrapper" id="svg-wheel-container">
+            <!-- Dynamic SVG injected here -->
+          </div>
+
+          <!-- Subtle Pastel Legend -->
+          <div class="pastel-legend-row" id="chart-legend-container">
+            <!-- Dynamic legend items -->
+          </div>
+        </div>
+
+        <!-- Dimension Score Breakdown Table -->
+        <div class="detailed-breakdown-section">
+          <div class="breakdown-header-row">
+            <h2 class="editorial-title">Score Breakdown</h2>
+            <p class="editorial-body">
+              A concise summary of each dimension's calculated score and classification.
+            </p>
+          </div>
+
+          <!-- Clean Editorial Table -->
+          <div class="table-space">
+            <table class="clean-editorial-table" aria-label="Wheel of Life Domain Scores Summary">
+              <caption class="sr-only">Summary of scores and classification bands for all 12 paths</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="col-order">#</th>
+                  <th scope="col" class="col-dimension">Dimension</th>
+                  <th scope="col" class="col-score">Score (1–10)</th>
+                  <th scope="col" class="col-classification">Classification</th>
+                </tr>
+              </thead>
+              <tbody id="results-table-body">
+                <!-- Dynamic rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right-Aligned Action Bar -->
+        <div class="results-action-bar">
+          <div class="actions-group dual-actions">
+            <button type="button" class="btn btn-secondary" id="btn-print-results">
+              Print / Save as PDF
+            </button>
+            <button type="button" class="btn btn-primary" id="btn-retake-assessment">
+              Begin Anew ↺
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Custom In-Screen Modal for Marriage Skip (PRD / UX) -->
+  <div id="modal-skip-marriage" class="modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-skip-title">
+    <div class="modal-card">
+      <div class="modal-header-icon">◎</div>
+      <h3 id="modal-skip-title" class="modal-title">Skip Marriage Dimension?</h3>
+      <p class="modal-body">
+        This path will be marked as <strong>Not Applicable</strong> to your current circumstances. It will not be treated as zero or affect your other dimension scores.
+      </p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-secondary" id="modal-skip-cancel">Cancel</button>
+        <button type="button" class="btn btn-primary" id="modal-skip-confirm">Yes, Skip This Path</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiet Minimalist Footer -->
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <span>The Wheel of Life</span>
+      <span class="meta-dot">·</span>
+      <span>A reflective personal development assessment</span>
+    </div>
+  </footer>
+
+  <script src="app.js?v=2.8"></script>
+</body>
+</html>
